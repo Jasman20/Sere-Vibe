@@ -1,0 +1,79 @@
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background: radial-gradient(circle at center, #ffede4, #6600c6bf);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+h1 {
+  margin-top: 5vh;
+  color: #fff;
+  font-size: 6vh;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Container */
+.container {
+  width: 80%;
+  max-width: 800px;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  margin-top: 2vh;
+}
+
+/* Grid layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+/* Card Styling */
+.card {
+  background: linear-gradient(135deg, #dcbefd, #fee9df);
+  height: 180px;
+  border-radius: 12px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.12);
+  color: #400269;
+  font-family: "Chewy", cursive;
+  font-size: 3.5vh;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.card:hover {
+  background: linear-gradient(315deg, #fee9df, #dcbefd);
+  transform: scale(1.05);
+  box-shadow: 0 14px 20px rgba(0, 0, 0, 0.25);
+}
+
+.card a {
+  text-decoration: none; /* Remove underline on nested links */
+  color: inherit;
+}
+
+/* Footer */
+#footer {
+  font-family: "Shantell Sans", cursive;
+  color: #fff;
+  font-size: 2vh;
+  text-align: center;
+  margin-top: auto;
+  padding: 20px 0;
+  user-select: none;
+  width: 100%;
+}

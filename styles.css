@@ -1,0 +1,63 @@
+
+/* General Styling */
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: linear-gradient(90deg, #ffd8c5, #d1a9ff);  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  div #logo {
+    height: 200px;
+    width: 200px;
+  }
+  
+  /* Container */
+  .container {
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+  }
+
+  #logo {
+    height: 350px;
+    width: 100px;
+
+  }
+  
+  /* Buttons */
+  button {
+    font-family:cursive;
+    padding: 10px;
+    background: linear-gradient(90deg, #fdba98, #310093);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    font-size: large;
+    background: linear-gradient(90deg, #fd8d56, #270174);
+  }
+  
+  /* Forms */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
