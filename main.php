@@ -167,7 +167,7 @@ if ($result && mysqli_num_rows($result) > 0) {
      <div class="grid">
       <a href="ai_chatbot.php" class="card">🤖<br>AI Chatbot</a>
       <a href="https://forms.gle/oNfMLcEsWNZpVTNPA" class="card">📅<br>Weekly Check-ins</a>
-      <a href="vibeflow.php" class="card">🧘‍♂️<br>Yoga</a>
+      <a href="vibeflow.php" class="card">🧘‍♂️<br>Soul Stretch</a>
       <a href="tips.php" class="card">🧠<br>Mental Wellness</a>
       <a href="journalling.php" class="card">📖<br>My Journal</a>
       <a href="profile.php" class="card">👤<br>My Profile</a>
