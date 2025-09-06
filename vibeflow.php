@@ -32,7 +32,7 @@
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
       width: 100%;
-      max-width: 1000px;
+      max-width: 750px;
     }
     .session-card {
       background: white;
@@ -58,15 +58,48 @@
       border-radius: 8px;
       cursor: pointer;
       font-size: 1em;
+      transition: background-color 0.2s;
     }
     .session-card button:hover {
       background-color: #9933ff;
     }
+
+    /* 🎨 Controls section */
     .controls {
       margin-top: 30px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
     .controls button {
-      margin: 5px;
+      padding: 10px 20px;
+      background-color: #6a0dad;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.2s;
+    }
+    .controls button:hover {
+      background-color: #4b0082;
+    }
+
+    /* Back button styling */
+    .back-btn {
+      margin-top: 20px;
+      padding: 10px 25px;
+      background-color: #ff6666;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.2s;
+    }
+    .back-btn:hover {
+      background-color: #cc0000;
     }
   </style>
 </head>
@@ -100,11 +133,15 @@
     </div>
   </div>
 
+  <!-- 🎛️ Controls -->
   <div class="controls">
     <button onclick="pauseSpeech()">Pause</button>
     <button onclick="resumeSpeech()">Resume</button>
     <button onclick="stopSpeech()">Stop</button>
   </div>
+
+  <!-- 🔙 Back button -->
+  <button class="back-btn" onclick="window.location.href='main.php'">Back</button>
 
   <script>
     let currentUtterance;

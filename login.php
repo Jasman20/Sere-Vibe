@@ -42,18 +42,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-<!-- login form shown if request is GET -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Login</title>
-</head>
-<body>
-    <h2>Login</h2>
-    <form method="POST" action="login.php">
-        <input type="text" name="login-name" placeholder="Enter username" required><br>
-        <input type="password" name="login-password" placeholder="Enter password" required><br>
-        <button type="submit">Login</button>
-    </form>
-</body>
-</html>
+

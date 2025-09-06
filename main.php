@@ -1,9 +1,9 @@
 <?php
 session_start();
-include'db.php';
+include ('db.php');
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location:login.php");
+    header("Location: login.html");
     exit();
 }
 
@@ -29,7 +29,8 @@ if ($result && mysqli_num_rows($result) > 0) {
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: "Poppins", serif;
+      font-weight: 200;
       transition: background 0.3s, color 0.3s;
     }
 
@@ -60,7 +61,7 @@ if ($result && mysqli_num_rows($result) > 0) {
       object-fit: cover;
     }
 
-    .nav-right button, .nav-right a {
+    .nav-right button {
       margin-left: 10px;
       background: none;
       border: none;
@@ -72,7 +73,7 @@ if ($result && mysqli_num_rows($result) > 0) {
 
     .container {
       padding: 20px;
-      max-width: 960px;
+      max-width: 850px;
       margin: 0 auto;
     }
 
@@ -86,6 +87,7 @@ if ($result && mysqli_num_rows($result) > 0) {
     .card {
       background: linear-gradient(135deg, #f8bbd0, #d1c4e9);
       border-radius: 12px;
+      text-decoration: none;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       display: flex;
       justify-content: center;
@@ -93,7 +95,7 @@ if ($result && mysqli_num_rows($result) > 0) {
       height: 160px;
       font-size: 22px;
       color: #4a148c;
-      font-weight: bold;
+      font-weight: 600;
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       animation: fadeIn 0.5s ease-in-out;
@@ -148,7 +150,55 @@ if ($result && mysqli_num_rows($result) > 0) {
     .dark-mode #footer {
       color: #aaa;
     }
+
+   .logout-btn {
+  background: linear-gradient(135deg, #e1bee7, #f8bbd0); /* soft lavender-pink */
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #4a148c;
+  border: none;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+} 
+
+.logout-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  background: linear-gradient(135deg, #f3d1ff, #fce4ec);
+  color: #6a1b9a;
+}
+
+  .dark-mode .logout-btn {
+  background: linear-gradient(135deg, #424242, #616161);
+  color: #fff;
+}
+
+.dark-mode .logout-btn:hover {
+  background: linear-gradient(135deg, #555, #777);
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dongle-regular {
+  font-family: "Dongle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
   </style>
+  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dongle&family=DynaPuff:wght@400..700&family=Joti+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="navbar">
@@ -157,8 +207,8 @@ if ($result && mysqli_num_rows($result) > 0) {
       <span class="logo-text">Sere-Vibe</span>
     </div>
     <div class="nav-right">
-      <button onclick="toggleDarkMode()">🌓</button>
-      <a href="logout.php">Logout</a>
+      <!-- <button onclick="toggleDarkMode()">🌓</button> -->
+      <a href="logout.php" class="logout-btn">Logout</a>
     </div>
   </div>
 
@@ -167,7 +217,7 @@ if ($result && mysqli_num_rows($result) > 0) {
      <div class="grid">
       <a href="ai_chatbot.php" class="card">🤖<br>AI Chatbot</a>
       <a href="https://forms.gle/oNfMLcEsWNZpVTNPA" class="card">📅<br>Weekly Check-ins</a>
-      <a href="vibeflow.php" class="card">🧘‍♂️<br>Soul Stretch</a>
+      <a href="vibeflow.php" class="card">🧘‍♂️<br>Vibeflow</a>
       <a href="tips.php" class="card">🧠<br>Mental Wellness</a>
       <a href="journalling.php" class="card">📖<br>My Journal</a>
       <a href="profile.php" class="card">👤<br>My Profile</a>
@@ -176,7 +226,7 @@ if ($result && mysqli_num_rows($result) > 0) {
 
   <div id="footer">Feeling meh? We're here to help. 💜</div>
 
-  <script>
+  <!-- <script>
     function toggleDarkMode() {
       document.body.classList.toggle("dark-mode");
       localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
@@ -187,6 +237,6 @@ if ($result && mysqli_num_rows($result) > 0) {
         document.body.classList.add("dark-mode");
       }
     };
-  </script>
+  </script> -->
 </body>
 </html>
